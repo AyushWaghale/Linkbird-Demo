@@ -698,6 +698,62 @@ function SidebarMenuSubButton({
   )
 }
 
+
+//sidebar profile component can be added here
+function SidebarProfile() {
+  return (
+    <div className="flex items-center gap-3 p-6 border-b border-gray-200">
+      {/* Avatar Circle with initials */}
+      <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 font-semibold">
+        PE
+      </div>
+      {/* Profile name and subtext */}
+      <div className="flex flex-col">
+        <span className="font-semibold text-sm text-gray-900">Kandid</span>
+        <span className="text-xs text-gray-500">Personal</span>
+      </div>
+      {/* Optional dropdown icon or toggle */}
+      <button
+        type="button"
+        aria-label="Profile options"
+        className="ml-auto p-1 rounded hover:bg-gray-100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4 text-gray-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
+function SidebarFooterProfile() {
+  return (
+    <div className="flex items-center gap-3 p-4 border-t border-gray-200">
+      {/* Avatar with initials */}
+      <div className="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center relative">
+        BK
+        <span className="absolute -bottom-1 -right-1 bg-blue-800 text-xs rounded-full px-1 py-0.5 font-semibold">
+          PRO
+        </span>
+      </div>
+      {/* User info */}
+      <div className="flex flex-col truncate">
+        <span className="font-semibold text-sm truncate">Bhavya From Kandid</span>
+        <span className="text-xs truncate text-gray-500">bhavya@kandid.ai</span>
+      </div>
+    </div>
+  );
+}
+
+
+
 export {
   Sidebar,
   SidebarContent,
@@ -712,6 +768,7 @@ export {
   SidebarMenu,
   SidebarMenuAction,
   SidebarMenuBadge,
+  SidebarProfile,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSkeleton,
@@ -723,4 +780,5 @@ export {
   SidebarSeparator,
   SidebarTrigger,
   useSidebar,
+  SidebarFooterProfile,
 }
